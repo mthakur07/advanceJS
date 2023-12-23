@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         // For in Loop
-        const student = { 
-            fname : 'aruntomar',
-            course: 'mern stack',
-            location : 'noida'
+        // const student = {
+        //     fname: 'aruntomar',
+        //     course: 'mern stack',
+        //     location: 'noida'
+        // }
+        // for (const key in student) {
+        //     console.log(key + ': ' + student[key])
+        // }
+
+        //Example with an array
+        // const myArray = ['apple', 'banana', 'orange'];
+
+        // for (let index in myArray) {
+        //     console.log(index + ': ' + myArray[index]);
+        // }
+
+
+
+
+        // Example with an array
+        const myArray = ['apple', 'banana', 'orange'];
+
+        for (let value of myArray) {
+            console.log(value);
         }
-        for (const key in student) {
-           console.log(key  + ': ' + student[key])
+        // Output:
+        // apple
+        // banana
+        // orange
+
+        // Example with a string
+        const myString = 'Hello';
+
+        for (let char of myString) {
+            console.log(char);
         }
 
+        // Example with a Map
+        const myMap = new Map([
+            ['key1', 'value1'],
+            ['key2', 'value2'],
+            ['key3', 'value3']
+        ]);
 
-
-
-
+        for (let [key, value] of myMap) {
+            console.log(key + ': ' + value);
+        }
     </script>
 </body>
+
 </html>
