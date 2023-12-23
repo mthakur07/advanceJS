@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1> This is Original</h1>
+<script>
+Array.prototype.extraproperty = "Rahul"
+
+const myNewArray = ['RAHUL PANDEY']
+
+// for (const key in myNewArray) {
+//     if (myNewArray.hasOwnProperty(key)) {
+// console.log(key)  
+//   }
+// }
+for (const key in myNewArray) {
+console.log(key) 
+// console.log(myNewArray.extraproperty);
+// console.log(myNewArray.originalproperty);
+// console.log(myNewArray.fakeproperty);  
+}
+</script>    
+</body>
+</html>

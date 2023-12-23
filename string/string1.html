@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverseWords(val) {
+    let words = [];
+    let currentWord = "";
+
+    for (let i = 0; i < val.length; i++) {
+        if (val[i] !== " ") {
+            currentWord += val[i];
+        } else {
+            words.push(currentWord);
+            currentWord = "";
+        }
+    }
+
+    // Add the last word (if any)
+    if (currentWord) {
+        words.push(currentWord);
+    }
+
+    let reversedParagraph = "";
+    for (let i = words.length - 1; i >= 0; i--) {
+        reversedParagraph += words[i];
+        if (i !== 0) {
+            reversedParagraph += " ";
+        }
+    }
+
+    return reversedParagraph;
+}
+
+console.log(reverseWords("Hi how are you"));
+
+    </script>    
+</body>
+</html>

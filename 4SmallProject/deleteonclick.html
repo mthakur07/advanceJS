@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .color-box {
+            width: 100px;
+            height: 100px;
+            margin: 2px;
+            border-radius: 3px;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="createRandomColorBox()">Create Random Color Box</button>
+    <p>Total Number of Boxes: <span id="box-count">0</span></p>
+    <div id="color-box-container"></div>
+
+    <script> 
+        let boxCount = 0;
+
+        function createRandomColorBox() {
+            const colorBoxContainer = document.getElementById('color-box-container');
+            const newColorBox = document.createElement('div');
+            newColorBox.classList.add('color-box');
+
+            // Generate a random color using hexadecimal values
+            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+            // Set the background color of the box to the random color
+            newColorBox.style.backgroundColor = randomColor;
+
+            // Increment the box count and display it
+            boxCount++;
+            document.getElementById('box-count').textContent = boxCount;
+
+            // Add a click event listener to delete the box when clicked
+            newColorBox.addEventListener('click', () => {
+                colorBoxContainer.removeChild(newColorBox);
+                boxCount--;
+                document.getElementById('box-count').textContent = boxCount;
+            });
+
+            // Append the new color box to the container
+            colorBoxContainer.appendChild(newColorBox);
+        }
+    </script>
+</body>
+</html>

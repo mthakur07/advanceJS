@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function reverseString(val) {
+    let output = "";
+    let iCount = -1;
+
+    for (let i = 0; i <= val.length; i++) {
+        if (val[i] !== " " && i !== val.length) {
+            continue;
+        }
+
+        for (let j = i - 1; j > iCount; j--) {
+            output += val[j];
+        }
+
+        if (i !== val.length) {
+            output += " ";
+        }
+
+        iCount = i;
+    }
+
+    return output;
+}
+
+console.log(reverseString("Hi how are you"));
+    </script>
+</body>
+</html>
