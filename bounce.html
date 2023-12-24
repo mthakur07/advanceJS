@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style> 
-    body { 
-        align-items: center;
-        margin: 0;
-        overflow: hidden;
-    }
-    .ball { 
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        border-radius: 50%;
-        animation: bounce 1s infinite ;
-    }
+    <style>
+        body {
+            align-items: center;
+            margin: 0;
+            overflow: hidden;
+        }
 
-    @keyframes bounce {
-        0%, 100% {
-            transform: translateX(50);
+        .ball {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(43, 255, 0);
+            border-radius: 50%;
+            animation: bounce 1s infinite;
         }
-        40% {
-            transform: translateY(200px);
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateX(50);
+            }
+
+            40% {
+                transform: translateY(40px);
+            }
+
+            60% {
+                transform: translateY(100px);
+            }
         }
-        60% { 
-            transform: translateY(100px);
-        }
-    }
     </style>
 </head>
+
 <body>
-    <div class="ball"> </div>
+    <div class="ball"></div>
 </body>
+
 </html>
