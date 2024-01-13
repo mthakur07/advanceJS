@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Styling for the box */
+    #colorBox {
+      width: 200px;
+      height: 200px;
+      background-color: #3498db;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: background-color 0.5s ease;
+    }
+  </style>
+  <script>
+    // JavaScript to change the color on mouse movement
+    document.addEventListener('mousemove', function (event) {
+      // Get the color based on mouse position
+      let mouseXPercentage = (event.clientX / window.innerWidth) * 100;
+      let mouseYPercentage = (event.clientY / window.innerHeight) * 100;
+      // Adjust color based on mouse position
+      let red = mouseXPercentage;
+      let green = (mouseXPercentage + mouseYPercentage) / 2;
+      let blue = mouseYPercentage;
+      // Set the new color
+      let color = `rgb(${red}%, ${green}%, ${blue}%)`;
+      document.getElementById('colorBox').style.backgroundColor = color;
+    });
+  </script>
+</head>
+<body>
+  <!-- The box element -->
+  <div id="colorBox"></div>
+</body>
+</html>

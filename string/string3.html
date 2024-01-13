@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const sentence = "this is world of magical and world of magic";
+        const toRemove = "world";
+
+        function removeFromSentence(str, word) {
+            return str.replace(new RegExp(word, 'g'), ''); // Added 'g' flag for global replacement
+        }
+        console.log(removeFromSentence(sentence, toRemove));
+    </script>
+</body>
+
+</html>

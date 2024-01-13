@@ -24,17 +24,29 @@
         // function hoisting() 
 
         // program will execute and out will be unde
-        var city = "Delhi";
-        hoisting();
-        function hoisting() {
-            var city = "mumbai";
-            console.log(city) // this hoisting only var will be hoisted and show the results as undefined
-            //let city = "Noida";
-            city = "Noida";
-            // console.log(" this is hoisting");
-            console.log(city);
-        }
+        // var city = "Delhi";
+        // hoisting();
+        // function hoisting() {
+        //     var city = "mumbai";
+        //     console.log(city) // this hoisting only var will be hoisted and show the results as undefined
+        //     //let city = "Noida";
+        //     city = "Noida";
+        //     // console.log(" this is hoisting");
+        //     console.log(city);
+        // }
 
+
+        // hoisting(); 
+
+
+        function x() {
+            function a() {
+                console.log('a');
+                a();
+            }
+            a();
+        }
+        x();
     </script>
 </body>
 
